@@ -11,11 +11,13 @@ define(function (require, exports, module) {
         FileSystem = brackets.getModule("filesystem/FileSystem"),
         ProjectManager = brackets.getModule("project/ProjectManager"),
         ProjectModel = brackets.getModule("project/ProjectModel"),
-        AppInit = brackets.getModule("utils/AppInit");
-    
+        AppInit = brackets.getModule("utils/AppInit"),
+        Dialogs = brackets.getModule("widgets/Dialogs"),
+        DefaultDialogs = brackets.getModule("widgets/DefaultDialogs"),
+        ExtensionUtils = brackets.getModule("utils/ExtensionUtils");
+
     var template;
-    function mkdir(dir)
-    {
+    function mkdir(dir) {
         var promise = $.Deferred();
         dir.create(function(err, stat){
             if(err) { promise.reject(err); }
@@ -23,12 +25,11 @@ define(function (require, exports, module) {
         });
         return promise;
     }
-    
-    function mkdirp(path)
-    {
+
+    function mkdirp(path) {
         var dir = FileSystem.getDirectoryForPath(path);
         var promise = $.Deferred();
-        
+
         dir.exists(function(err, exists){
             if(!exists)
             {
@@ -47,12 +48,11 @@ define(function (require, exports, module) {
                 promise.resolve();
             }
         });
-        
+
         return promise;
     }
 
-    function createFile(file)
-    {
+    function createFile(file) {
         var promise = $.Deferred();
         file.write(template, {}, function(err, stat){
             if(err) { promise.reject(err); }
@@ -64,18 +64,25 @@ define(function (require, exports, module) {
     {
         return CommandManager.execute(Commands.CMD_ADD_TO_WORKINGSET_AND_OPEN, {fullPath: file.fullPath});
     }
-    function createNewFile(filename)
-    {
+    function createNewFile(filename) {
+
+        ExtensionUtils.loadStyleSheet(module, "styles.css");
+
+        var template = require("text!templates/prompt-filename.html");
+        var compiledTemplate = Mustache.render(template, undefined);
+
+        var dialog = Dialogs.showModalDialogUsingTemplate(compiledTemplate);
+
         var fullBasePath = ProjectManager.getSelectedItem().fullPath;
         var basePath = fullBasePath.substring(0,fullBasePath.lastIndexOf("."));
         var file = FileSystem.getFileForPath(basePath + "." + filename);
         var dir = FileUtils.getDirectoryPath(file.fullPath);
                 mkdirp(dir)
-                    .then(function()   { return createFile(file); }) 
-                    .then(function()   { return addFileToWorkingSet(file); }) 
- }				
-    
-    
+                    .then(function()   { return createFile(file); })
+                    .then(function()   { return addFileToWorkingSet(file); })
+ }
+
+
     function newhtml() {
     	template = require('text!html-template.html');
     	createNewFile('new.html');
@@ -83,12 +90,12 @@ define(function (require, exports, module) {
     function newjs() {
     	template = require('text!js-template.js');
     	createNewFile('new.js');
-    	
+
     }
     function newcss() {
     	template = require('text!css-template.css');
     	createNewFile('new.css');
-    	
+
     }
     function newphp() {
         template = require('text!php-template.php');
@@ -100,7 +107,7 @@ CommandManager.register("New js", commandIdj, newjs);
 CommandManager.register("New css", commandIdc, newcss);
 CommandManager.register("New php", commandIdp, newphp);
 //Menus
-var menu = Menus.addMenu("New as", "edgedocks.custom.menu" );  
+var menu = Menus.addMenu("New as", "edgedocks.custom.menu" );
  menu.addMenuItem(commandIdh,[{key: "Ctrl-Shift-h", platform: "win"},
 {key: "Ctrl-Shift-h", platform: "mac"}]);
  menu.addMenuItem(commandIdj,[{key: "Ctrl-Shift-j", platform: "win"},
@@ -110,5 +117,3 @@ var menu = Menus.addMenu("New as", "edgedocks.custom.menu" );
  menu.addMenuItem(commandIdp,[{key: "Ctrl-Shift-p", platform: "win"},
 {key: "Ctrl-Shift-p", platform: "mac"}]);
 });
-
-
