@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0 auto;
     width: 500px;
-    height: 100px;
+    height: 96px;
     z-index: 1053;
     opacity: 1;
     position: absolute;
@@ -14,6 +14,8 @@
     overflow: hidden;
     background: #3c3f41;
     font-size: 16px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .prompt-filename-title {
@@ -21,7 +23,8 @@
     color: lightgray;
 }
 
-.dark input[type="text"].prompt-filename-input {
+.dark input[type="text"].prompt-filename-input,
+input[type="text"].prompt-filename-input {
     width: 458px;
     border: none;
     background: rgba(0,0,0,.7);
@@ -29,4 +32,5 @@
     line-height: 18px;
     height: 30px;
     color: gray;
+    margin: 0;
 }

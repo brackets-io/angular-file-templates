@@ -1,8 +1,8 @@
 /**
  * @param {type} angular
  * @returns {angular.module}
- * @author <%- author %>
- * @since <%= date %>
+ * @author {{{author}}}
+ * @since {{{date}}}
  */
 
 (function () {
@@ -12,7 +12,7 @@
     ], function (ng) {
         'use strict';
 
-        var moduleName = 'app.<%= module %>';
+        var moduleName = 'app.{{{moduleName}}}';
 
         ng.module(moduleName, []);
 
