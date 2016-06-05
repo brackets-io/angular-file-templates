@@ -16,10 +16,38 @@
     font-size: 16px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    transition: height .1s ease;
+}
+
+.prompt-filename.has-selector {
+    height: 143px;
+}
+
+.prompt-filename.has-modulename {
+    height: 172px;
+}
+
+.prompt-filename.has-selector.has-modulename {
+    height: 219px;
+}
+
+#selector-wrapper {
+    display: none;
+}
+
+#selector-wrapper {
+    width: 100%
+}
+
+#template-selector {
+    width: 100%;
+    font-size: 18px;
+    height: 38px;
+    padding: 4px;
 }
 
 .prompt-filename-title {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: lightgray;
 }
 
@@ -33,4 +61,13 @@ input[type="text"].prompt-filename-input {
     height: 30px;
     color: gray;
     margin: 0;
+}
+
+#modulename-wrapper {
+    display: none;
+    margin-top: 10px;
+}
+
+.visible {
+    display: block !important;
 }

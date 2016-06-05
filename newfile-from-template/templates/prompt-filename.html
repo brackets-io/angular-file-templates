@@ -1,4 +1,15 @@
 <div class="prompt-filename">
+    <div id="selector-wrapper">
+        <select id="template-selector">{{#templates}}
+            <option value="{{val}}" {{#placeholder}}disabled selected{{/placeholder}}>
+                {{name}}
+            </option>
+        {{/templates}}</select>
+    </div>
     <div class="prompt-filename-title">Enter the path for the new file</div>
-    <input type="text" id="filename" name="filepath" class="prompt-filename-input" autofocus>
+    <input type="text" id="filename" class="prompt-filename-input" autofocus>
+    <div id="modulename-wrapper">
+        <div class="prompt-filename-title">Enter the name of the module to attach this element to</div>
+        <input type="text" id="modulename" class="prompt-filename-input">
+    </div>
 </div>
