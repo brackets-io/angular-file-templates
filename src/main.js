@@ -1,9 +1,6 @@
 define(function (require, exports, module) {
     'use strict';
     var commandNewFromTemplate = 'newFromTemplate',
-        commandIdh = 'html',
-        commandIdj ='js',
-        commandIdc ='css',
         commandModule = 'module',
         commandController = 'controller',
         commandFactory = 'factory',
@@ -277,9 +274,6 @@ define(function (require, exports, module) {
     CommandManager.register('New Angular service', commandService, newAngularService);
     CommandManager.register('New Angular value', commandValue, newAngularValue);
     CommandManager.register('New Angular constant', commandConstant, newAngularConstant);
-    CommandManager.register('New html', commandIdh, newhtml);
-    CommandManager.register('New js', commandIdj, newjs);
-    CommandManager.register('New css', commandIdc, newcss);
 
     // Menus
     var fileMenu = Menus.getMenu('file-menu');
@@ -294,7 +288,4 @@ define(function (require, exports, module) {
     menu.addMenuItem(commandService,[{key: 'Ctrl-Alt-Shift-S', platform: 'win'}, {key: 'Ctrl-Opt-Shift-S', platform: 'mac'}]);
     menu.addMenuItem(commandValue,[{key: 'Ctrl-Alt-Shift-V', platform: 'win'}, {key: 'Ctrl-Opt-Shift-V', platform: 'mac'}]);
     menu.addMenuItem(commandConstant,[{key: 'Ctrl-Alt-Shift-N', platform: 'win'}, {key: 'Ctrl-Opt-Shift-N', platform: 'mac'}]);
-    menu.addMenuItem(commandIdh,[{key: 'Ctrl-Shift-h', platform: 'win'}, {key: 'Ctrl-Shift-h', platform: 'mac'}]);
-    menu.addMenuItem(commandIdj,[{key: 'Ctrl-Shift-j', platform: 'win'}, {key: 'Ctrl-Shift-j', platform: 'mac'}]);
-    menu.addMenuItem(commandIdc,[{key: 'Ctrl-Shift-c', platform: 'win'}, {key: 'Ctrl-Shift-c', platform: 'mac'}]);
 });

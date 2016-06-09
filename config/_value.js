@@ -8,7 +8,7 @@
 
     angular
         .module({{{moduleName}}})
-        .value(
+        .value({{{elementName}}},
         // Add your values here
         );
     });

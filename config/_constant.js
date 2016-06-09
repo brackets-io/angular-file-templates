@@ -8,7 +8,7 @@
 
     angular
         .module({{{moduleName}}})
-        .constant(
+        .constant({{{elementName}}},
         // Add your values here
         );
     });
