@@ -119,18 +119,18 @@ define(function (require, exports, module) {
     }
 
     function newhtml() {
-    	template = require('text!html-template.html');
+    	template = require('text!config/html-template.html');
     	createNewFile('new.html');
     }
 
     function newjs() {
-    	template = require('text!js-template.js');
+    	template = require('text!config/js-template.js');
     	createNewFile('new.js');
 
     }
 
     function newcss() {
-    	template = require('text!css-template.css');
+    	template = require('text!config/css-template.css');
     	createNewFile('new.css');
 
     }
