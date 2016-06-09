@@ -257,7 +257,7 @@ define(function (require, exports, module) {
     function createDialog() {
         ExtensionUtils.loadStyleSheet(module, 'styles/styles.css');
 
-        var dialogTemplate = require('text!/templates/prompt-filename.html');
+        var dialogTemplate = require('text!templates/prompt-filename.html');
         var compiledTemplate = Mustache.render(dialogTemplate, {templates: templates});
 
         return Dialogs.showModalDialogUsingTemplate(compiledTemplate);
