@@ -136,32 +136,32 @@ define(function (require, exports, module) {
     }
 
     function newAngularModule() {
-        template = require('text!/config/_module.js');
+        template = require('text!config/_module.js');
         promptFilename('.module.js');
     }
 
     function newAngularController() {
-        template = require('text!/config/_controller.js');
+        template = require('text!config/_controller.js');
         promptFilename('.controller.js', true);
     }
 
     function newAngularFactory() {
-        template = require('text!/config/_factory.js');
+        template = require('text!config/_factory.js');
         promptFilename('.factory.js', true);
     }
 
     function newAngularService() {
-        template = require('text!/config/_service.js');
+        template = require('text!config/_service.js');
         promptFilename('.service.js', true);
     }
 
     function newAngularConstant() {
-        template = require('text!/config/_constant.js');
+        template = require('text!config/_constant.js');
         promptFilename('.constant.js', true);
     }
 
     function newAngularValue() {
-        template = require('text!/config/_value.js');
+        template = require('text!config/_value.js');
         promptFilename('.value.js', true);
     }
 
@@ -228,7 +228,7 @@ define(function (require, exports, module) {
             } else {
                 showModuleNameInput();
             }
-            template = require('text!/config/_' + this.value + '.js');
+            template = require('text!config/_' + this.value + '.js');
             suffix = '.' + this.value + '.js';
         }
 
@@ -255,7 +255,7 @@ define(function (require, exports, module) {
     }
 
     function createDialog() {
-        ExtensionUtils.loadStyleSheet(module, '/styles/styles.css');
+        ExtensionUtils.loadStyleSheet(module, 'styles/styles.css');
 
         var dialogTemplate = require('text!/templates/prompt-filename.html');
         var compiledTemplate = Mustache.render(dialogTemplate, {templates: templates});
