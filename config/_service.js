@@ -6,11 +6,12 @@
 (function () {
     'use strict';
 
-    angular.module(moduleName)
-        .controller('{{{serviceName}}}', {{{serviceName}}});
+    angular
+        .module(moduleName)
+        .service('{{{elementName}}}', {{{elementName}}});
 
     /* @ngInject */
-    function {{{serviceName}}} ($log) {
+    function {{{elementName}}} ($log) {
         var service = {};
 
         /// Service Public API ///
