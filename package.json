@@ -1,13 +1,12 @@
 {
-    "name": "newfile-from-template",
-    "title": "newfile-from-template",
-    "description": "you can new a file from your template,you can edit the template.it's so easy!",
-    "homepage": "https://github.com/sunray97/newfile-from-template",
-    "version": "1.1.2",
-    "author": "Ray Sun",
+    "name": "angular-file-templates",
+    "title": "angular-file-templates",
+    "description": "Create common angular files from templates",
+    "homepage": "https://github.com/natete/angular-file-templates",
+    "version": "0.1.0",
+    "author": "Ignacio González Bullón <igonzalez@emergya.com>",
     "license": "MIT",
     "engines": {
-        "brackets": ">=0.40.0",
         "brackets": ">=1.1.0"
     }
 
