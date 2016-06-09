@@ -1,30 +1,21 @@
-newfile-from-template
-=====================
-It's an Extension of [Brackets](http://brackets.io). You can create a new file from a template so you can start writing main content directly. It's so easy!
+### Based on
 
-How to use:
-----------
-A menu "New as" appears in the toolbar of Brackets when you reload it after installation. Select any of the below listed templates and a new file will be created in the current working directory. You can use hotkey too.
-**If you want edit the template don't change the filename!**
+This extension is based in sunray97's [newfile-from-template](https://github.com/sunray97/newfile-from-template)
 
-Templates:
----------
-- html-template.html
-- js-template.js
-- css-template.css
-- php-template.php
+# Angular-Template-Files
 
-Hotkey:
--------
-- New html -- ctrl+shift+h;
-- New js -- ctrl+shift+j;
-- New css -- ctrl+shift+c;
-- New php -- ctrl+shift+p;
+Angular-Template-Files is an extension for [Brackets](http://brackets.io/) editor. Provides some common [Angular](http://www.angular.io/) template files to create your new Angular components in your desired path and indicating the module to attach it.
 
-Version 1.1.0
--------------
-Update : Create a new file by selecting a file of current path. The new file's name will be your selected file's name with **.new.html(js or css or php)** in the end.
+## Usage
 
-Version 1.1.1
--------------
-Update : Change the introduction.
+A new "New as" item will be added in your Brackets editor. There you can find templates that are available so far. You can also find a new "New from template" item where you will get to a more general form to create your file. All these items have their corresponding hotkey. Once you have selected any of the options you will be prompted for the path (the extension will add .controller.js, .service.js, etc) and the module if needed.
+
+## Configuration
+
+You can set the author name of your files by setting the corresponding option either in your global or project preferences file.
+
+i.e. "angular-file-templates.author" : "John Doe <john.doe@mail.com>"
+
+You can tweak the templates that you can find in the corresponding extension folder under the config folder (i.e. /home/johndoe/.config/Brackets/extensions/user/angular-file-templates/config)
+
+Don't rename the files you find there in order to keep the extension working.
