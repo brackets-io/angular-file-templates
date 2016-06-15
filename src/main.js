@@ -126,13 +126,11 @@ define(function (require, exports, module) {
     function newjs() {
     	template = require('text!config/js-template.js');
     	createNewFile('new.js');
-
     }
 
     function newcss() {
     	template = require('text!config/css-template.css');
     	createNewFile('new.css');
-
     }
 
     function newAngularModule() {
@@ -208,7 +206,7 @@ define(function (require, exports, module) {
                     template = Mustache.render(template,
                                 {
                                     date: new Date().toLocaleDateString(),
-                                    elementName: getElementName(fileName),
+                                    elementName: getElementName(fileName + suffix),
                                     author: prefs.get('author'),
                                     moduleName: moduleNameInput ? moduleNameInput.val() : ''
                                 });
@@ -272,6 +270,7 @@ define(function (require, exports, module) {
 
     function getElementName(filepath) {
         var fileName = filepath.split('/').pop();
+        fileName = fileName.slice(0, filename.lastIndexOf('.'));
 
         return _.capitalize(_.camelCase(fileName));
     }
