@@ -270,7 +270,7 @@ define(function (require, exports, module) {
 
     function getElementName(filepath) {
         var fileName = filepath.split('/').pop();
-        fileName = fileName.slice(0, filename.lastIndexOf('.'));
+        fileName = fileName.slice(0, fileName.lastIndexOf('.'));
 
         return _.capitalize(_.camelCase(fileName));
     }
