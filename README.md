@@ -2,7 +2,7 @@
 
 This extension is based in sunray97's [newfile-from-template](https://github.com/sunray97/newfile-from-template)
 
-# Angular-Template-Files
+# Angular-File-Templates
 
 Angular-Template-Files is an extension for [Brackets](http://brackets.io/) editor. Provides some common [Angular](http://www.angular.io/) template files to create your new Angular components in your desired path and indicating the module to attach it.
 
