@@ -2,6 +2,7 @@
     "name": "angular-file-templates",
     "title": "angular-file-templates",
     "description": "Create common angular files from templates",
+    "keywords": ["brackets-extension", "amgular", "templates", "brackets", "extension"],
     "homepage": "https://github.com/natete/angular-file-templates",
     "version": "0.1.0",
     "author": "Ignacio González Bullón <igonzalez@emergya.com>",
