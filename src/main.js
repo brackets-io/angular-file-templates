@@ -21,7 +21,7 @@ define(function (require, exports, module) {
         {val: 'constant', name: 'Angular Constant'}
     ];
 
-    var prefix = 'newfile-from-template';
+    var prefix = 'angular-file-templates';
 
    	var CommandManager = brackets.getModule('command/CommandManager'),
         Commands = brackets.getModule('command/Commands'),
