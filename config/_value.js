@@ -7,8 +7,8 @@
     'use strict';
 
     angular
-        .module({{{moduleName}}})
-        .value({{{elementName}}},
+        .module('{{{moduleName}}}')
+        .value('{{{elementName}}}',
         // Add your values here
         );
     });
