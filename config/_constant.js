@@ -7,8 +7,8 @@
     'use strict';
 
     angular
-        .module({{{moduleName}}})
-        .constant({{{elementName}}},
+        .module('{{{moduleName}}}')
+        .constant('{{{elementName}}}',
         // Add your values here
         );
     });
