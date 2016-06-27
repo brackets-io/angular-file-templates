@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module(moduleName)
+        .module({{{moduleName}}})
         .service('{{{elementName}}}', {{{elementName}}});
 
     /* @ngInject */
