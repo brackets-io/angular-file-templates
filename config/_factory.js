@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module({{{moduleName}}})
+        .module('{{{moduleName}}}')
         .factory('{{{elementName}}}', {{{elementName}}});
 
     /* @ngInject */
