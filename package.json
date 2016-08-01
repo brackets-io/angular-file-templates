@@ -6,7 +6,7 @@
     "homepage": "https://github.com/natete/angular-file-templates",
     "bugs": "https://github.com/natete/angular-file-templates/issues",
     "repository": "natete/angular-file-templates",
-    "version": "0.2.7",
+    "version": "0.2.8",
     "author": "Ignacio González Bullón <igonzalez@emergya.com>",
     "license": "MIT",
     "engines": {
